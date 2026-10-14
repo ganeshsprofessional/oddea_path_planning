@@ -39,7 +39,7 @@ class BenchmarkVisualizationModule:
         ax.set_title(f"Path Comparison Overlay - {title_prefix}")
         
         # Feed the custom, marker-free handles directly to the legend
-        ax.legend(handles=legend_elements, loc="upper left")
+        ax.legend(handles=legend_elements, loc="upper right")
         
         path_img_file = os.path.join(output_dir, f"{title_prefix.lower()}_paths.png")
         plt.savefig(path_img_file, dpi=300)

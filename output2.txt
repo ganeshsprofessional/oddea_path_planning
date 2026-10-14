@@ -1,0 +1,14 @@
+[+] Initializing ODDEA* Project Environment...
+[*] Running Standard A*...
+[*] Running ODDEA* (with intermediate snapshot recording enabled)...
+
+=============== GRID 40X40 BENCHMARK ===============
+Algorithm    | Length   | Time (ms) | Nodes  | Cov % 
+-----------------------------------------------------
+A*           | 57.01    | 5.72      | 738    | 46.12 
+ODDEA*       | 57.01    | 3.99      | 210    | 13.12 
+=============================================
+[*] Rendering intermediate search snapshots...
+[+] Saved 5 intermediate snapshots to 'results/snapshots'
+
+[✓] Execution complete. Check the 'results/' folder for output and snapshots.

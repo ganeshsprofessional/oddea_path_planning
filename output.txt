@@ -1,0 +1,2227 @@
+[+] Initializing ODDEA* Project Environment...
+[*] Running Standard A*...
+[*] Running ODDEA* (with intermediate snapshot recording enabled)...
+
+=============== GRID 40X40 BENCHMARK ===============
+Algorithm    | Length   | Time (ms) | Nodes  | Cov % 
+-----------------------------------------------------
+A*           | 57.01    | 5.76      | 738    | 46.12 
+ODDEA*       | 57.01    | 3.95      | 210    | 13.12 
+=============================================
+Traceback (most recent call last):
+  File "/home/ganesh/oddea_path_planning/main.py", line 31, in <module>
+    run_benchmark_and_snapshots()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/ganesh/oddea_path_planning/main.py", line 24, in run_benchmark_and_snapshots
+    BenchmarkVisualizationModule.render_and_save_visualizations(grid, start, goal, results, "Grid_40x40")
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ganesh/oddea_path_planning/src/visualization.py", line 28, in render_and_save_visualizations
+    ax.legend(loc="upper left")
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/axes/_axes.py", line 323, in legend
+    self.legend_ = mlegend.Legend(self, handles, labels, **kwargs)
+                   ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/legend.py", line 563, in __init__
+    self._init_legend_box(handles, labels, markerfirst)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/legend.py", line 913, in _init_legend_box
+    handle_list.append(handler.legend_artist(self, orig_handle,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+                                             fontsize, handlebox))
+                                             ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/legend_handler.py", line 129, in legend_artist
+    artists = self.create_artists(legend, orig_handle,
+                                  xdescent, ydescent, width, height,
+                                  fontsize, handlebox.get_transform())
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/legend_handler.py", line 303, in create_artists
+    self.update_prop(legline, orig_handle, legend)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/legend_handler.py", line 88, in update_prop
+    self._update_prop(legend_handle, orig_handle)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/legend_handler.py", line 79, in _update_prop
+    self._default_update_prop(legend_handle, orig_handle)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/legend_handler.py", line 84, in _default_update_prop
+    legend_handle.update_from(orig_handle)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/lines.py", line 1356, in update_from
+    self._marker = MarkerStyle(marker=other._marker)
+                   ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/markers.py", line 255, in __init__
+    self._set_marker(marker)
+    ~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/markers.py", line 332, in _set_marker
+    self.__dict__ = copy.deepcopy(marker.__dict__)
+                    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 131, in deepcopy
+    y = copier(x, memo)
+  File "/usr/lib/python3.14/copy.py", line 202, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+                             ~~~~~~~~^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 234, in _reconstruct
+    y = func(*args)
+  File "/usr/lib/python3.14/copy.py", line 233, in <genexpr>
+    args = (deepcopy(arg, memo) for arg in args)
+            ~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/copy.py", line 138, in deepcopy
+    y = copier(memo)
+  File "/home/ganesh/oddea_path_planning/.venv/lib/python3.14/site-packages/matplotlib/path.py", line 285, in __deepcopy__
+    p = copy.deepcopy(super(), memo)
+  File "/usr/lib/python3.14/copy.py", line 157, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/usr/lib/python3.14/copy.py", line 233, in _reconstruct
+    args = (deepcopy(arg, memo) for arg in args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded
